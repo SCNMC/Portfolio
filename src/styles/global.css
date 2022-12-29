@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "Monument Extended";
+	src: url("/assets/Fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+    font-family: "NewYork";
+    src: url("/assets/Fonts/NewYork.otf");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+body {
+    background: #bebeb8;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
