@@ -1,6 +1,21 @@
 <script>
     export let title;
     export let date;
+	import { onMount } from "svelte";
+	import { gsap } from "gsap/dist/gsap";
+	onMount(() => {
+		gsap.from(
+			"header , .nav, footer",
+			2,
+			{
+				opacity: 0,
+				y: 30,
+				ease: "Expo.easeInOut",
+				delay: 4.2,
+			},
+			0.1
+		);
+	});
 </script>
 
 <header>
@@ -20,8 +35,8 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: 1em;
-		padding: 2em 1em;
+		gap: 2.5em;
+		padding: 2em 2.5em;
 		font-family: "Monument Extended";
     }
 
@@ -43,7 +58,7 @@
 			padding: 3em 5em;
 		}
         nav{
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
 		ul {
 			display: flex;
