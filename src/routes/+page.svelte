@@ -1,14 +1,14 @@
 <script>
     import Header from "$lib/components/Header.svelte";
     import Hero from "$lib/components/Hero.svelte";
-    import Footer from "$lib/components/footer.svelte";
+    import Info from "$lib/components/Info.svelte"; 
 </script>
 
 <Header title="Portfolio." date="2023"
 />
 <Hero name="Shauri Maigua"
 />
-<Footer/>
+<Info/>
 
 <!-- <section>
     <h1>POOPO</h1>
