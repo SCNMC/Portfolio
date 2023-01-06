@@ -34,18 +34,16 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: 2.5em;
-		padding: 2em 1em;
+		gap: .5em;
+	padding: 2em 1em;
 		font-family: "Monument Extended";
 	}
 
 	h1 {
 		font-size: 1.3em;
 		margin: 0 auto;
-
 		font-family: "Monument Extended";
 	}
-
 	@media (min-width: 70rem) {
 		header {
 			display: flex;

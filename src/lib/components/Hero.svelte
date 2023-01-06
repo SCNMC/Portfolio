@@ -24,8 +24,8 @@
 		});
 		mm.add("(min-width: 2000px)", () => {
 			gsap.to("img", 2.4, {
-				width: "1000",
-				height: "1800",
+				width: "100%",
+				height: "1700",
 				padding: "none",
 				ease: "Expo.easeInOut",
 				delay: 3.2,
@@ -56,7 +56,7 @@
 		color: #2584ec;
 	}
 	section {
-		padding: 0.5em 1em;
+		padding: 2em 1em;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -74,8 +74,8 @@
 	}
 
 	img {
-		max-width: 100%;
-		height: 70vh;
+		max-width: 80%;
+		max-height: 70vh;
 		object-fit: cover;
 	}
 
@@ -89,8 +89,8 @@
 			font-weight: 200;
 		}
 		img {
-			width: 70%;
-			height: 90vh;
+			width: 90%;
+			max-height: 100vh;
 		}
 	}
 </style>
