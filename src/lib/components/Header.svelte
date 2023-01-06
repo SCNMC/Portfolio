@@ -4,17 +4,24 @@
 	import { onMount } from "svelte";
 	import { gsap } from "gsap/dist/gsap";
 	onMount(() => {
-		gsap.from(
-			"header , .nav, footer",
-			2,
-			{
-				opacity: 0,
-				y: 30,
-				ease: "Expo.easeInOut",
-				delay: 4.2,
-			},
-			0.1
-		);
+        gsap.from(
+        "header, footer ,h2 ",
+        2,
+        {
+          y: "200",
+          opacity: 0,
+          ease: "Expo.easeInOut",
+          delay: 2,
+          stagger: 0.08,
+        }
+      );
+
+      gsap.from("img",1, {
+        scale: 1,
+        ease: "Expo.easeOut",
+        delay: 4,
+		opacity: 1,
+      });
 	});
 </script>
 
@@ -34,15 +41,18 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: .5em;
-	padding: 2em 1em;
+		gap:3em;
+	    padding: 2em 2em;
 		font-family: "Monument Extended";
 	}
 
 	h1 {
-		font-size: 1.3em;
-		margin: 0 auto;
+		font-size: 1.2em;
+
 		font-family: "Monument Extended";
+	}
+	p{
+		font-size: 1.2em;
 	}
 	@media (min-width: 70rem) {
 		header {

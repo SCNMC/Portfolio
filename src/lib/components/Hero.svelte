@@ -1,5 +1,5 @@
 <script>
-	let mm = gsap.matchMedia();
+	// let mm = gsap.matchMedia();
 	export let name;
 	import { onMount } from "svelte";
 	import { gsap } from "gsap/dist/gsap";
@@ -9,54 +9,27 @@
 			ease: "Expo.easeInOut",
 			delay: 0,
 		});
-		gsap.to("img", 4, {
-			scale: "1",
-			ease: "Expo.easeInOut",
-			delay: 0,
-		});
-
-		gsap.to("img", 2.4, {
-			width: "500",
-			height: "700",
-			padding: "none",
-			ease: "Expo.easeInOut",
-			delay: 3.2,
-		});
-		mm.add("(min-width: 2000px)", () => {
-			gsap.to("img", 2.4, {
-				width: "100%",
-				height: "1700",
-				padding: "none",
-				ease: "Expo.easeInOut",
-				delay: 3.2,
-			});
-
-			// this setup code only runs when viewport is at least 800px wide
-		});
-		gsap.from("img", 0.4, {
-			opacity: 0,
-			ease: "Expo.easeInOut",
-			delay: 3.4,
-		});
 	});
+
 </script>
 
 <section>
 	<div class="background" />
-	<img src="/assets/img1.jpg" alt="statue" />
+	<img class="statue" src="/assets/img1.jpg" alt="statue" />
 	<h2 class="title">{name} </h2>
 </section>
 
 <style>
 	h2 {
 		position: absolute;
+		text-align: center;
 		font-size: 3.5em;
 		font-family: "NewYork";
 		font-weight: bolder;
 		color: #2584ec;
 	}
 	section {
-		padding: 2em 1em;
+		padding: 1em 1em;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -74,8 +47,8 @@
 	}
 
 	img {
-		max-width: 80%;
-		max-height: 70vh;
+	    width: 100%;
+		height: 80vh;
 		object-fit: cover;
 	}
 
@@ -85,12 +58,21 @@
 		}
 
 		h2 {
-			font-size: 12em;
+			font-size: 1em;
 			font-weight: 200;
 		}
 		img {
-			width: 90%;
-			max-height: 100vh;
+			max-width: 35%;
+			max-height:75vh;
 		}
+	}
+
+	@media (min-width: 45rem) {
+
+		h2 {
+			font-size: 9em;
+			font-weight: 500;
+		}
+
 	}
 </style>
